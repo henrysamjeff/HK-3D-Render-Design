@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - HK 3D Render Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HK 3D Render Design</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#gallery">Galerie</a></li>
+                    <li><a href="cart.html">Panier (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <img src="icons/menu.png" alt="Menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-container">
+        <h2>Votre Panier</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button class="checkout-btn">Procéder au paiement</button>
+            <div class="purchase-info">
+                Après votre achat, Choisissez le rendu qui vous plaît et contactez-nous par e-mail à henrysamjeff288@gmail.com. 
+                    Nous vous enverrons le fichier 3D dans différents formats comme SKP OBJ etc... 
+                    Si vous voulez seulement le rendu image, nous l'enverrons en haute qualité adaptée à différents profils.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HK 3D Render Design</h3>
+                    <p>Créateurs de rendus 3D de qualité supérieure depuis 2021</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#gallery">Galerie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contactez-nous</h3>
+                    <p>Email: henrysamjeff288@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="icons/tik tok.png" alt="Tik Tok"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HK 3D Render Design. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

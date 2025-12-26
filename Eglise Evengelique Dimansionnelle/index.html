@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Église Évangélique Dimensionnelle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intro animée (remplacer par votre intro) -->
+    <div id="intro-screen">
+        <div class="logo-animation">
+            <!-- REMPLACER PAR VOTRE LOGO -->
+            <i class="fas fa-church"></i>
+            <h1>Église Évangélique Dimensionnelle</h1>
+        </div>
+        <div class="loading-text">Bienvenue dans la maison de Dieu</div>
+        <!-- REMPLACER PAR VOTRE AUDIO -->
+        <audio id="intro-music" src="assets/intro-music.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- En-tête -->
+    <header>
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="logo" data-page="home">
+                <!-- REMPLACER PAR VOTRE LOGO -->
+                <i class="fas fa-church"></i>
+                <span>Église Dimensionnelle</span>
+            </a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher des vidéos, messages...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#" data-page="donate"><i class="fas fa-hand-holding-heart"></i></a>
+                <a href="#" data-page="contact"><i class="fas fa-phone-alt"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation principale -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" data-page="home" class="active">Accueil</a></li>
+                <li><a href="#" data-page="about">À propos</a></li>
+                <li><a href="#" data-page="services">Nos cultes</a></li>
+                <li><a href="#" data-page="ministries">Activités et ministères</a></li>
+                <li><a href="#" data-page="contact">Contact</a></li>
+                <li><a href="#" data-page="donate" class="donate-btn">Faire un don</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <!-- Barre latérale -->
+        <aside class="sidebar">
+            <a href="#" class="sidebar-item active" data-page="home">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="video-player">
+                <i class="fas fa-play-circle"></i>
+                <span>Dernière vidéo</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="services">
+                <i class="fas fa-church"></i>
+                <span>Cultes du dimanche</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="ministries">
+                <i class="fas fa-users"></i>
+                <span>Jeunesse</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="ministries">
+                <i class="fas fa-pray"></i>
+                <span>Groupe de prière</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="ministries">
+                <i class="fas fa-hands-helping"></i>
+                <span>Évangélisation</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="about">
+                <i class="fas fa-info-circle"></i>
+                <span>Notre histoire</span>
+            </a>
+            <a href="#" class="sidebar-item" data-page="contact">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nous trouver</span>
+            </a>
+        </aside>
+
+        <!-- Contenu des pages -->
+        <div class="content">
+            <!-- Page d'accueil -->
+            <section id="home" class="page active">
+                <h2>Messages récents</h2>
+                <div class="videos-grid" id="videosGrid">
+                    <!-- Les vidéos seront chargées par JavaScript -->
+                </div>
+            </section>
+
+            <!-- Lecteur vidéo -->
+            <section id="video-player" class="page">
+                <div class="video-player-container">
+                    <h2 id="videoPlayerTitle"></h2>
+                    <div class="video-player" id="videoPlayer">
+                        <!-- REMPLACER PAR VOTRE LECTEUR VIDÉO -->
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Cliquez sur une vidéo pour la lire</p>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="action-btn like-btn" id="likeBtn">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>J'aime</span>
+                        </button>
+                        <button class="action-btn dislike-btn" id="dislikeBtn">
+                            <i class="fas fa-thumbs-down"></i>
+                            <span>Je n'aime pas</span>
+                        </button>
+                        <button class="action-btn pray-btn" id="prayBtn">
+                            <i class="fas fa-pray"></i>
+                            <span>Je prie / Je suis béni</span>
+                        </button>
+                    </div>
+                    <div class="video-description" id="videoDescription"></div>
+                </div>
+            </section>
+
+            <!-- Page À propos -->
+            <section id="about" class="page">
+                <h2>À propos de nous</h2>
+                <div class="about-section">
+                    <h3>Notre histoire</h3>
+                    <p>L'Église Évangélique Dimensionnelle a été fondée en 2005 par le Pasteur Jean Lumière avec une vision claire : amener les gens à expérimenter les dimensions de la grâce de Dieu. Depuis lors, nous avons grandi en touchant des vies à travers l'enseignement biblique, la louange et l'adoration authentique.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Notre mission</h3>
+                    <p>Notre mission est de conduire chaque personne à une relation personnelle avec Jésus-Christ, à développer une foi dimensionnelle qui impacte tous les aspects de la vie, et à former des disciples engagés pour transformer leur génération.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Notre pasteur</h3>
+                    <p>Le Pasteur Roody Fevry sert comme pasteur principal depuis la fondation de l'église. Avec plus de 25 ans d'expérience dans le ministère, il est passionné par l'enseignement de la Parole de Dieu avec profondeur et pertinence pour la vie quotidienne.</p>
+                </div>
+            </section>
+
+            <!-- Page Nos cultes -->
+            <section id="services" class="page">
+                <h2>Nos cultes et services</h2>
+                <div class="service-section">
+                    <h3>Culte du dimanche</h3>
+                    <p><strong>Horaires :</strong> 10h00 - 12h30</p>
+                    <p>Un temps de louange dynamique, d'enseignement biblique approfondi et de communion fraternelle. Venez comme vous êtes et expérimentez la présence de Dieu.</p>
+                </div>
+                <div class="service-section">
+                    <h3>École du dimanche</h3>
+                    <p><strong>Horaires :</strong> 10h00 - 12h00</p>
+                    <p>Un programme spécial pour les enfants de 3 à 12 ans avec des enseignements adaptés, des activités créatives et des chants joyeux.</p>
+                </div>
+                <div class="service-section">
+                    <h3>Réunion de prière</h3>
+                    <p><strong>Mercredi :</strong> 19h00 - 20h30</p>
+                    <p>Un moment puissant de prière collective où nous intercédons pour nos familles, notre ville, notre nation et les missions dans le monde.</p>
+                </div>
+                <div class="service-section">
+                    <h3>Étude biblique</h3>
+                    <p><strong>Vendredi :</strong> 18h30 - 20h00</p>
+                    <p>Une exploration approfondie de la Bible dans un cadre interactif et convivial. Parfait pour ceux qui veulent grandir dans leur connaissance des Écritures.</p>
+                </div>
+            </section>
+
+            <!-- Page Activités et ministères -->
+            <section id="ministries" class="page">
+                <h2>Activités et ministères</h2>
+                <div class="ministry-section">
+                    <h3>Jeunesse Dimensionnelle</h3>
+                    <p><strong>Réunion :</strong> Samedi à 17h00</p>
+                    <p>Un espace dynamique pour les 13-25 ans avec des activités, des enseignements pertinents et des moments forts de louange. Un endroit où les jeunes peuvent découvrir leur identité en Christ.</p>
+                </div>
+                <div class="ministry-section">
+                    <h3>Groupe de prière</h3>
+                    <p><strong>Réunion :</strong> Tous les jours à 6h00 (en ligne)</p>
+                    <p>Commencez chaque journée avec Dieu ! Rejoignez notre groupe de prière matinal en ligne pour un temps de communion et d'intercession.</p>
+                </div>
+                <div class="ministry-section">
+                    <h3>Évangélisation</h3>
+                    <p><strong>Activités :</strong> Chaque mois</p>
+                    <p>Nous organisons régulièrement des campagnes d'évangélisation, des distributions de nourriture et des actions sociales pour partager l'amour de Christ dans notre communauté.</p>
+                </div>
+                <div class="ministry-section">
+                    <h3>Groupe de femmes</h3>
+                    <p><strong>Réunion :</strong> 2ème samedi du mois à 15h00</p>
+                    <p>Un temps d'échange, d'encouragement et d'étude biblique dédié aux femmes de tous âges pour grandir ensemble dans la foi.</p>
+                </div>
+            </section>
+
+            <!-- Page Contact -->
+            <section id="contact" class="page">
+                <h2>Contactez-nous</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>123 Avenue de la Foi<br>75000 Ville Céleste</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+33 6 12 34 56 78</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@eglise-dimensionnelle.fr</p>
+                    </div>
+                </div>
+                <h3 style="margin-top: 30px;">Nous trouver</h3>
+                <div class="map-container">
+                    <!-- REMPLACER PAR VOTRE CARTE GOOGLE MAPS -->
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Carte interactive (Google Maps)</span>
+                </div>
+            </section>
+
+            <!-- Page Faire un don -->
+            <section id="donate" class="page">
+                <h2>Soutenir l'œuvre de Dieu</h2>
+                <div class="donation-info">Vot
+                    <h3>Votre Offrande </h3>
+                    <p> Honore l’Éternel avec tes biens, et avec les prémices de tout ton revenu.</p>
+                    
+                    <div class="verse">
+                        "Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie."<br>
+                        <strong>2 Corinthiens 9:7</strong>
+                    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Église Évangélique Dimensionnelle</h3>
+                <p>Une église où chaque vie compte et où la présence de Dieu transforme.</p>
+                <p><i class="fas fa-clock"></i> Culte du dimanche à 8h00 pour 10h00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="#" data-page="home">Accueil</a></li>
+                    <li><a href="#" data-page="about">À propos</a></li>
+                    <li><a href="#" data-page="services">Nos cultes</a></li>
+                    <li><a href="#" data-page="ministries">Ministères</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="#" data-page="video-player">Messages vidéos</a></li>
+                    <li><a href="#" data-page="contact">Nous contacter</a></li>
+                    <li><a href="#">Demande de prière</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2023 Église Évangélique Dimensionnelle.</p>
+            <p><a href="#" style="color: var(--gray-color);">Mentions légales</a> | <a href="#" style="color: var(--gray-color);">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

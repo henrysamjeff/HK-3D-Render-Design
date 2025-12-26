@@ -1,0 +1,80 @@
+<!-- EXEMPLE D'INTRO À PERSONNALISER -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1c7ed6 0%, #228be6 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .intro-container {
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            max-width: 300px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .loading {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            margin: 30px auto;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: #ffd43b;
+            animation: loading 10s linear forwards;
+        }
+        
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <!-- REMPLACER PAR VOTRE LOGO -->
+        <img src="logo.png" alt="Logo Église Dimensionnelle" class="logo">
+        
+        <h1>Église Évangélique Dimensionnelle</h1>
+        <p>"Là où l'Esprit du Seigneur est, là est la liberté"<br>2 Corinthiens 3:17</p>
+        
+        <div class="loading">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+</body>
+</html>
